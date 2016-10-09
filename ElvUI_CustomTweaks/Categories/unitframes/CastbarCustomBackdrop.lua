@@ -52,7 +52,7 @@ local function PostCastStart(self, unit, name, castid)
 	local r, g, b, a = color.r, color.g, color.b, color.a
 
 	if self.bg and self.bg:IsShown() then
-	--	self.bg:SetTexture(r, g, b)
+		self.bg:SetTexture(r, g, b)
 	else
 		if self.backdrop then
 			self.backdrop:SetBackdropColor(r, g, b, a)
@@ -68,7 +68,7 @@ local function PostChannelStart(self, unit, name, castid)
 	local r, g, b, a = color.r, color.g, color.b, color.a
 
 	if self.bg and self.bg:IsShown() then
-	--	self.bg:SetTexture(r, g, b)
+		self.bg:SetTexture(r, g, b)
 	else
 		if self.backdrop then
 			self.backdrop:SetBackdropColor(r, g, b, a)
@@ -83,7 +83,7 @@ local function PostCastInterruptible(self, unit)
 	local r, g, b, a = color.r, color.g, color.b, color.a
 	
 	if self.bg and self.bg:IsShown() then
-	--	self.bg:SetTexture(r, g, b)
+		self.bg:SetTexture(r, g, b)
 	else
 		if self.backdrop then
 			self.backdrop:SetBackdropColor(r, g, b, a)

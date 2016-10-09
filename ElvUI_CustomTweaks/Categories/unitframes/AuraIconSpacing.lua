@@ -119,7 +119,7 @@ function UpdateAuraSettings()
 	local auraSpacing = E.db.CustomTweaks.AuraIconSpacing.spacing or 1
 
 	for unit, unitName in pairs(UF.units) do
-		local spacing = E.db.CustomTweaks.AuraIconSpacing.units[unitName] and auraSpacing or E.spacing
+		local spacing = E.db.CustomTweaks.AuraIconSpacing.units[unitName] and auraSpacing or E.Spacing
 		local frameNameUnit = E:StringTitle(unitName)
 		frameNameUnit = frameNameUnit:gsub("t(arget)", "T%1")
 		
@@ -130,7 +130,7 @@ function UpdateAuraSettings()
 	end
 
 	for unit, unitgroup in pairs(UF.groupunits) do
-		local spacing = E.db.CustomTweaks.AuraIconSpacing.units[unitgroup] and auraSpacing or E.spacing
+		local spacing = E.db.CustomTweaks.AuraIconSpacing.units[unitgroup] and auraSpacing or E.Spacing
 		local frameNameUnit = E:StringTitle(unit)
 		frameNameUnit = frameNameUnit:gsub("t(arget)", "T%1")
 		
@@ -142,7 +142,7 @@ function UpdateAuraSettings()
 	
 	for _, header in pairs(UF.headers) do
 		local name = header.groupName
-		local spacing = E.db.CustomTweaks.AuraIconSpacing.units[name] and auraSpacing or E.spacing
+		local spacing = E.db.CustomTweaks.AuraIconSpacing.units[name] and auraSpacing or E.Spacing
 
 		for i = 1, header:GetNumChildren() do
 			local group = select(i, header:GetChildren())

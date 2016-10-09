@@ -1,4 +1,4 @@
-## Interface: 70000
+## Interface: 30300
 ## Author: Blazeflack
 ## Credit: Azilroka, Benik
 ## Version: 1.30
