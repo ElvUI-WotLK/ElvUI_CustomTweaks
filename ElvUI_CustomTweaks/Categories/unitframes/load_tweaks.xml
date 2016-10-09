@@ -1,0 +1,8 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file='AuraIconSpacing.lua'/>
+	<Script file='AuraIconText.lua'/>
+	<Script file='CastbarCustomBackdrop.lua'/>
+	<Script file='CastbarText.lua'/>
+	<Script file='PowerBarTexture.lua'/>
+	<Script file='UnitframeSpacingLimits.lua'/>
+</Ui>
