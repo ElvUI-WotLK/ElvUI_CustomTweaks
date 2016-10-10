@@ -78,23 +78,12 @@ end
 CT.Configs["AuraIconSpacing"] = ConfigTable
 if not isEnabled then return; end
 
-local function OnPostUpdateAura(self, unit, button)
-	local size = button:GetParent().size
-	if size then
-		button:SetSize(size, size) --:Size() uses E:Scale() which causes overlapping borders
-	end
-end
-hooksecurefunc(UF, "PostUpdateAura", OnPostUpdateAura)
-
 --Set spacing between individual aura icons and update PostUpdateIcon
 local function SetAuraSpacingAndUpdate(unitframe, unitName, auraSpacing)
 	if not unitframe.Buffs and not unitframe.Debuffs then return; end
 
 	if unitframe.Buffs then
 		unitframe.Buffs.spacing = auraSpacing
-		--Reset PostUpdateIcon so it includes our hook
-		unitframe.Buffs.PostUpdateIcon = nil
-		unitframe.Buffs.PostUpdateIcon = UF.PostUpdateAura
 		--Update internal aura settings
 		if unitframe.db then
 			UF:Configure_Auras(unitframe, "Buffs")
@@ -102,8 +91,6 @@ local function SetAuraSpacingAndUpdate(unitframe, unitName, auraSpacing)
 	end
 	if unitframe.Debuffs then
 		unitframe.Debuffs.spacing = auraSpacing
-		unitframe.Debuffs.PostUpdateIcon = nil
-		unitframe.Debuffs.PostUpdateIcon = UF.PostUpdateAura
 		if unitframe.db then
 			UF:Configure_Auras(unitframe, "Debuffs")
 		end

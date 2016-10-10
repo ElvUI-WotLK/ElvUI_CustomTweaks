@@ -63,8 +63,6 @@ end
 
 local function ValueColorUpdate(hex, r, g, b)
 	local textFormat = E.db.CustomTweaks.BagsTextFormat.textFormat
-	if(not textFormat) then return; end
-
 	if textFormat == "FREE" or textFormat == "USED" then
 		displayString = join("", "%s", hex, "%d|r")
 	else
@@ -75,7 +73,6 @@ local function ValueColorUpdate(hex, r, g, b)
 		OnEvent(lastPanel)
 	end
 end
-E["valueColorUpdateFuncs"][ValueColorUpdate] = true
 
 function CT:UpdateDatatext()
 	ValueColorUpdate(E["media"].hexvaluecolor, unpack(E["media"].rgbvaluecolor))
@@ -87,4 +84,7 @@ end
 
 local f = CreateFrame("Frame")
 f:RegisterEvent("PLAYER_ENTERING_WORLD")
-f:SetScript("OnEvent", CT.UpdateDatatext)
+f:SetScript("OnEvent", function()
+	E["valueColorUpdateFuncs"][ValueColorUpdate] = true
+	CT.UpdateDatatext()
+end)

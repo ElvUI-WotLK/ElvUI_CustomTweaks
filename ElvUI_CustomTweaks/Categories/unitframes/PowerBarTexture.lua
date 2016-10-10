@@ -59,6 +59,18 @@ function BuildTable()
 		local unitframe = _G["ElvUF_"..frameNameUnit]
 		if unitframe and unitframe.Power then powerbars[unitframe.Power] = true end
 	end
+	
+	for _, header in pairs(UF.headers) do
+		for i = 1, header:GetNumChildren() do
+			local group = select(i, header:GetChildren())
+			--group is Tank/Assist Frames, but for Party/Raid we need to go deeper
+			for j = 1, group:GetNumChildren() do
+				--Party/Raid unitbutton
+				local unitbutton = select(j, group:GetChildren())
+				if unitbutton.Power then powerbars[unitbutton.Power] = true end
+			end
+		end
+	end
 end
 BuildTable()
 
