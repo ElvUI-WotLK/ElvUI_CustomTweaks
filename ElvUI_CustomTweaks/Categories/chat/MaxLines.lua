@@ -37,7 +37,7 @@ end
 CT.Configs["ChatMaxLines"] = ConfigTable
 if not isEnabled then return; end
 
-function UpdateMaxLines()
+function UpdateMaxLines(self)
 	for _, frameName in pairs(CHAT_FRAMES) do
 		local frame = _G[frameName]
 		frame:SetMaxLines(E.db.CustomTweaks.ChatMaxLines.MaxLines)
