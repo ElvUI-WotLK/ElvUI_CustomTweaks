@@ -45,7 +45,7 @@ local Tweaks = {
 		{"UnitFrameSpacingLimits", L["Increases the maximum allowed vertical and horizontal spacing for party and raid frames."]},
 	},
 	["NamePlate"] = {
-		{"NamePlatesText", L["Test."]},
+		{"NamePlatesText", L["Allows you to change position of nameplates texts."]},
 	},
 }
 
