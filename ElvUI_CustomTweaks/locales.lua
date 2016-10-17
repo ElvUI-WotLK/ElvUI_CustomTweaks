@@ -53,6 +53,7 @@ L["Makes the Consolidated Buffs frame movable and provides some configuration op
 L["Max Lines"] = true;
 L["Minimap Tweaks"] = true;
 L["Misc Tweaks"] = true;
+L["NamePlate Tweaks"] = true;
 L["Only Free Slots"] = true;
 L["Only Used Slots"] = true;
 L["Options"] = true;
@@ -189,6 +190,7 @@ if L then
 	L["Max Lines"] = true;
 	L["Minimap Tweaks"] = "Твики мини-карты";
 	L["Misc Tweaks"] = "Разные твики";
+	L["NamePlate Tweaks"] = "Твики индикаторов здоровья";
 	L["Only Free Slots"] = true;
 	L["Only Used Slots"] = true;
 	L["Options"] = "Настройки";

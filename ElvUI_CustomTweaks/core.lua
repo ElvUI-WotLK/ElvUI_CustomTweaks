@@ -44,6 +44,9 @@ local Tweaks = {
 		{"PowerBarTexture", L["Allows you to use a separate texture for unitframe power bars."]},
 		{"UnitFrameSpacingLimits", L["Increases the maximum allowed vertical and horizontal spacing for party and raid frames."]},
 	},
+	["NamePlate"] = {
+		{"NamePlatesText", L["Test."]},
+	},
 }
 
 local Authors = {
@@ -64,6 +67,9 @@ local Authors = {
 		"PushedColor",
 		"RaidControl",
 		"UnitFrameSpacingLimits",
+	}},
+	{"Bunny", {
+		"NamePlatesText",
 	}},
 }
 

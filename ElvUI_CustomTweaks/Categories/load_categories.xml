@@ -6,4 +6,5 @@
 	<Include file="minimap\load_tweaks.xml"/>
 	<Include file="misc\load_tweaks.xml"/>
 	<Include file="unitframes\load_tweaks.xml"/>
+	<Include file="nameplates\load_tweaks.xml"/>
 </Ui>
