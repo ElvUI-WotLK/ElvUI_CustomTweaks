@@ -291,7 +291,6 @@ function CT:SetBagButtonStylePosition(isBank)
 				f.sortButton:Point("RIGHT", f.bagText, "LEFT", -5, E.Border * 2)
 			end
 			f.editBox:Point('RIGHT', f.purchaseBagButton, 'LEFT', -5, 0);
-			f.editBox:Point('RIGHT', f.purchaseBagButton, 'LEFT', -5, 0);
 		else
 			f.purchaseBagButton:Hide()
 			f.purchaseBagButtonOld:Show()
