@@ -6,13 +6,11 @@ local isEnabled = E.private["bags"].enable and E.private["CustomTweaks"] and E.p
 --Cache global variables
 local _G = _G
 local unpack = unpack
+
 local CreateFrame = CreateFrame
-local SortReagentBankBags = SortReagentBankBags
 local GetNumBankSlots = GetNumBankSlots
 local ToggleFrame = ToggleFrame
-local PlaySound = PlaySound
 local IsShiftKeyDown = IsShiftKeyDown
-local DepositReagentBank = DepositReagentBank
 
 ---
 -- GLOBALS: BagItemAutoSortButton, BankFrame
@@ -35,7 +33,7 @@ local function ConfigTable()
 				order = 1,
 				type = "toggle",
 				name = L["Add 'Stack' Button"],
-				disabled = function() return not isEnabled end,
+				disabled = function() return not isEnabled end
 			},
 			style = {
 				order = 2,
@@ -44,8 +42,8 @@ local function ConfigTable()
 				disabled = function() return not isEnabled end,
 				values = {
 					["ICON"] = L["Icons"],
-					["TEXTURE"] = L["Textures"],
-				},
+					["TEXTURE"] = L["Textures"]
+				}
 			},
 			buttonColor = {
 				order = 3,
@@ -64,9 +62,9 @@ local function ConfigTable()
 					t.r, t.g, t.b = r, g, b
 					CT:SetButtonColors()
 					CT:SetButtonColors(true)
-				end,
-			},
-		},
+				end
+			}
+		}
 	}
 end
 CT.Configs["BagButtons"] = ConfigTable
@@ -83,14 +81,10 @@ local function CreateContainerButtons(self, name, isBank)
 		f.sortButtonOld:Size(55, 10)
 		f.sortButtonOld:SetTemplate('Default', true)
 		f.sortButtonOld:SetBackdropColor(unpack(buttonColor))
+		f.sortButtonOld.ttText = L['Sort Bags']
 		f.sortButtonOld:SetScript("OnEnter", B.Tooltip_Show)
-		f.sortButtonOld:SetScript('OnClick', function()
-			if f.holderFrame:IsShown() then
-				B:CommandDecorator(B.SortBags, 'bank')();
-			else
-				SortReagentBankBags()
-			end
-		end)
+		f.sortButtonOld:SetScript("OnLeave", B.Tooltip_Hide)
+		f.sortButtonOld:SetScript('OnClick', function() B:CommandDecorator(B.SortBags, 'bank')(); end)
 
 		--Purchase Bags Button
 		f.purchaseBagButtonOld = CreateFrame('Button', name..'PurchaseButtonOld', f.holderFrame)
@@ -189,7 +183,9 @@ local function CreateContainerButtons(self, name, isBank)
 		f.sortButtonOld:Size(55, 10)
 		f.sortButtonOld:SetTemplate('Default', true)
 		f.sortButtonOld:SetBackdropColor(unpack(buttonColor))
+		f.sortButtonOld.ttText = L['Sort Bags']
 		f.sortButtonOld:SetScript("OnEnter", B.Tooltip_Show)
+		f.sortButtonOld:SetScript("OnLeave", B.Tooltip_Hide)
 		f.sortButtonOld:SetScript('OnClick', function() B:CommandDecorator(B.SortBags, 'bags')(); end)
 
 		--Stack/Transfer Button Icon
@@ -289,6 +285,12 @@ function CT:SetBagButtonStylePosition(isBank)
 		if E.db.CustomTweaks.BagButtons.style == "ICON" then
 			f.purchaseBagButton:Show()
 			f.purchaseBagButtonOld:Hide()
+			if E.db.CustomTweaks.BagButtons.stackButton then
+				f.sortButton:Point('RIGHT', f.stackButton, 'LEFT', -5, 0)
+			else
+				f.sortButton:Point("RIGHT", f.bagText, "LEFT", -5, E.Border * 2)
+			end
+			f.editBox:Point('RIGHT', f.purchaseBagButton, 'LEFT', -5, 0);
 			f.editBox:Point('RIGHT', f.purchaseBagButton, 'LEFT', -5, 0);
 		else
 			f.purchaseBagButton:Hide()
@@ -336,13 +338,15 @@ function CT:SetButtonColors(isBank)
 	if not f then return; end
 
 	f.sortButtonOld.SetBackdropColor = nil
-	f.stackButtonOld.SetBackdropColor = nil
-	f.bagsButtonOld.SetBackdropColor = nil
 	f.sortButtonOld:SetBackdropColor(unpack(buttonColor))
-	f.stackButtonOld:SetBackdropColor(unpack(buttonColor))
-	f.bagsButtonOld:SetBackdropColor(unpack(buttonColor))
 	f.sortButtonOld.SetBackdropColor = E.noop
+
+	f.stackButtonOld.SetBackdropColor = nil
+	f.stackButtonOld:SetBackdropColor(unpack(buttonColor))
 	f.stackButtonOld.SetBackdropColor = E.noop
+
+	f.bagsButtonOld.SetBackdropColor = nil
+	f.bagsButtonOld:SetBackdropColor(unpack(buttonColor))
 	f.bagsButtonOld.SetBackdropColor = E.noop
 	
 	if isBank then
