@@ -11,6 +11,7 @@ L["Add 'Stack' Button"] = true;
 L["AddOn Description / Download"] = true;
 L["Allows you to change bag buttons to use the classic texture style and allows you to add a 'Stack' button."] = true;
 L["Allows you to change template of the Raid Control button or hide it altogether."] = true;
+L["Allows you to change the text and duration font for the castbar."] = true;
 L["Allows you to choose the color of the actionbar button when it is pushed down."] = true;
 L["Allows you to choose which text format the Bags datatext uses."] = true;
 L["Allows you to make actionbars clickthrough."] = true;
@@ -148,6 +149,7 @@ if L then
 	L["AddOn Description / Download"] = "Описание / Скачать:";
 	L["Allows you to change bag buttons to use the classic texture style and allows you to add a 'Stack' button."] = "Позволяет изменять кнопки сумок на текстурные полосы, а так же добавляет кнопку 'Собрать'.";
 	L["Allows you to change template of the Raid Control button or hide it altogether."] = "Позволяет изменять вид кнопки управления рейдом или полностью скрыть её.";
+	L["Allows you to change the text and duration font for the castbar."] = "Позволяет изменять шрифт текста и длительности для полосы заклинания";
 	L["Allows you to choose the color of the actionbar button when it is pushed down."] = "Позволяет изменять цвет кнопок панелей команд во время нажатия.";
 	L["Allows you to choose which text format the Bags datatext uses."] = "Позволяет выбрать формат текста сумок.";
 	L["Allows you to make actionbars clickthrough."] = "Позволяет совершать нажатия мыши сквозь панели команд.";

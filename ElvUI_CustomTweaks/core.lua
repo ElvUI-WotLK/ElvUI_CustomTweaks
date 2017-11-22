@@ -43,6 +43,7 @@ local Tweaks = {
 		{"CastbarText", L["Allows you to position and change color and alpha of castbar text."]},
 		{"PowerBarTexture", L["Allows you to use a separate texture for unitframe power bars."]},
 		{"UnitFrameSpacingLimits", L["Increases the maximum allowed vertical and horizontal spacing for party and raid frames."]},
+		{"CastbarFont", L["Allows you to change the text and duration font for the castbar."]},
 	},
 }
 
@@ -64,6 +65,7 @@ local Authors = {
 		"PushedColor",
 		"RaidControl",
 		"UnitFrameSpacingLimits",
+		"CastbarFont",
 	}},
 }
 

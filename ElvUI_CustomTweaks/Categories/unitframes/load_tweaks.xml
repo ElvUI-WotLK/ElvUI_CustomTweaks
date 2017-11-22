@@ -5,4 +5,5 @@
 	<Script file='CastbarText.lua'/>
 	<Script file='PowerBarTexture.lua'/>
 	<Script file='UnitframeSpacingLimits.lua'/>
+	<Script file='CastbarFont.lua'/>
 </Ui>
