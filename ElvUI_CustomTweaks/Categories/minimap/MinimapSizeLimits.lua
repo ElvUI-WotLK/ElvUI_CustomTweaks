@@ -4,6 +4,6 @@ if not E.private["general"]["minimap"].enable or not E.private["CustomTweaks"] o
 local CT = E:GetModule("CustomTweaks")
 
 local function ConfigTable()
-	E.Options.args.maps.args.minimap.args.size.min = 40
+	E.Options.args.maps.args.minimap.args.generalGroup.args.size.min = 40
 end
 CT.Configs["MinimapSizeLimits"] = ConfigTable
