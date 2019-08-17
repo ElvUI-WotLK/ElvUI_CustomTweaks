@@ -1,5 +1,5 @@
 -- English localization file for enUS and enGB.
-local AceLocale = LibStub:GetLibrary("AceLocale-3.0");
+local AceLocale = LibStub:GetLibrary("AceLocale-3.0-ElvUI");
 local L = AceLocale:NewLocale("ElvUI", "enUS", true);
 if not L then return; end
 
@@ -97,49 +97,49 @@ L["Will hide stack text on auras that are not cast by you."] = true;
 if GetLocale() == "enUS" then return end
 
 --German Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "deDE")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "deDE")
 if L then
 	--Add translations here
 end
 
 --Spanish (Spain) Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "esES")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "esES")
 if L then
 	--Add translations here
 end
 
 --Spanish (Mexico) Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "esMX")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "esMX")
 if L then
 	--Add translations here
 end
 
 --French Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "frFR")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "frFR")
 if L then
 	--Add translations here
 end
 
 --Italian Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "itIT")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "itIT")
 if L then
 	--Add translations here
 end
 
 --Korean Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "koKR")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "koKR")
 if L then
 	--Add translations here
 end
 
 --Portuguese Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "ptBR")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "ptBR")
 if L then
 	--Add translations here
 end
 
 --Russian Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "ruRU")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "ruRU")
 if L then
 	L["%s is a collection of various tweaks for ElvUI. New features or changes have been requested by regular users and then fulfilled by members of the Tukui community."] = "%s представляет собой набор различных настроек для ElvUI. Новые возможности или изменения были запрошены обычными пользователями, а затем реализованы членами сообщества TukUI.";
 	L["%s is the author of the following tweaks:"] = "%s является автором следующих твиков:";
@@ -233,13 +233,13 @@ if L then
 end
 
 --Chinese (China, simplified) Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "zhCN")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "zhCN")
 if L then
 	--Add translations here
 end
 
 --Chinese (Taiwan, traditional) Localizations
-local L = LibStub("AceLocale-3.0"):NewLocale("ElvUI", "zhTW")
+local L = LibStub("AceLocale-3.0-ElvUI"):NewLocale("ElvUI", "zhTW")
 if L then
 	--Add translations here
 end

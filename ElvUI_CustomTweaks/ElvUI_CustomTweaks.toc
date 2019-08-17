@@ -2,7 +2,7 @@
 ## Author: Blazeflack
 ## Credit: Azilroka, Benik
 ## Version: 1.30
-## Title: |cffA11313E|r|cffC4C4C4lvUI|r |cffA11313C|r|cffC4C4C4ustom|r |cffA11313T|r|cffC4C4C4weaks|r
+## Title: |cff1784d1E|r|cffe5e3e3lvUI|r |cff1784d1C|r|cffe5e3e3ustom|r |cff1784d1T|r|cffe5e3e3weaks|r
 ## Notes: A collection of various tweaks to ElvUI, requested by the users.
 ## RequiredDeps: ElvUI
 ## DefaultState: enabled
