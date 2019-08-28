@@ -240,7 +240,7 @@ function PositionCastbarText(unit)
 	
 	if unit == "Arena" then
 		for i = 1, 5 do
-			local unitframe = _G["ElvUF_Arena"..1]
+			local unitframe = _G["ElvUF_Arena"..i]
 			local castbar = unitframe and unitframe.Castbar
 			
 			if castbar then
@@ -252,7 +252,7 @@ function PositionCastbarText(unit)
 		end
 	elseif unit == "Boss" then
 		for i = 1, MAX_BOSS_FRAMES do
-			local unitframe = _G["ElvUF_Boss"..1]
+			local unitframe = _G["ElvUF_Boss"..i]
 			local castbar = unitframe and unitframe.Castbar
 			
 			if castbar then
