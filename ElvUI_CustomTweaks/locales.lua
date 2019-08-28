@@ -16,7 +16,6 @@ L["Allows you to choose the color of the actionbar button when it is pushed down
 L["Allows you to choose which text format the Bags datatext uses."] = true;
 L["Allows you to make actionbars clickthrough."] = true;
 L["Allows you to position and change color and alpha of castbar text."] = true;
-L["Allows you to position the unitframe aura duration and stack text or hide it."] = true;
 L["Allows you to set a spacing between individual aura icons for the units you choose."] = true;
 L["Allows you to use a separate texture for unitframe power bars."] = true;
 L["Assist"] = true;
@@ -30,18 +29,12 @@ L["Button Style"] = true;
 L["Chat Tweaks"] = true;
 L["Credit"] = true;
 L["Datatexts Tweaks"] = true;
-L["Duration text will be hidden until it reaches this threshold (in seconds). Set to -1 to always show duration text."] = true;
-L["Duration Text"] = true;
 L["Focus"] = true;
 L["FocusTarget"] = true;
 L["Free/Total"] = true;
-L["Hide From Others"] = true;
 L["Hide Raid Control"] = true;
 L["Hide Text On Units"] = true;
-L["Hide Text"] = true;
 L["Hold Shift:"] = true;
-L["Horizontal offset of the duration text."] = true;
-L["Horizontal offset of the stack count."] = true;
 L["Icons"] = true;
 L["Increases the amount of messages saved in a chat window, before they get replaced by new messages."] = true;
 L["Increases the maximum allowed vertical and horizontal spacing for party and raid frames."] = true;
@@ -61,7 +54,6 @@ L["Pet"] = true;
 L["PetTarget"] = true;
 L["Player"] = true;
 L["Please use the following links if you need help or wish to know more about this AddOn."] = true;
-L["Position of the duration text on the aura icon."] = true;
 L["Position of the stack count on the aura icon."] = true;
 L["PowerBar Texture"] = true;
 L["Raid"] = true;
@@ -75,21 +67,15 @@ L["Stack Items In Bags"] = true;
 L["Stack Items In Bank"] = true;
 L["Stack Items To Bags"] = true;
 L["Stack Items To Bank"] = true;
-L["Stack Text"] = true;
 L["Tank"] = true;
 L["Target"] = true;
 L["TargetTarget"] = true;
 L["TargetTargetTarget"] = true;
 L["The max amount of messages kept in chat before they get replaced by new messages. Changing this setting will clear the chat in all windows."] = true;
-L["Threshold"] = true;
 L["Tweaks"] = true;
 L["Unitframe Tweaks"] = true;
 L["Use Transparent Template"] = true;
 L["Used/Total"] = true;
-L["Vertical offset of the duration text."] = true;
-L["Vertical offset of the stack count."] = true;
-L["Will hide duration text on auras that are not cast by you."] = true;
-L["Will hide stack text on auras that are not cast by you."] = true;
 
 --We don't need the rest if we're on enUS or enGB locale, so stop here.
 if GetLocale() == "enUS" then return end
@@ -152,7 +138,6 @@ if L then
 	L["Allows you to choose which text format the Bags datatext uses."] = "Позволяет выбрать формат текста сумок.";
 	L["Allows you to make actionbars clickthrough."] = "Позволяет совершать нажатия мыши сквозь панели команд.";
 	L["Allows you to position and change color and alpha of castbar text."] = "Позволяет перемещать и изменять цвет и прозрачность текста полос заклинаний.";
-	L["Allows you to position the unitframe aura duration and stack text or hide it."] = "Позволяет перемещать или скрывать текст времени и стаков на аурах рамок юнитов.";
 	L["Allows you to set a spacing between individual aura icons for the units you choose."] = "Позволяет устанавливать отступ между аурами на выбранных рамках юнитов.";
 	L["Allows you to use a separate texture for unitframe power bars."] = "Позволяет использовать отдельную текстуру ресурса для рамок юнитов";
 	L["Assist"] = "Помощник";
@@ -166,18 +151,12 @@ if L then
 	L["Chat Tweaks"] = "Твики чата";
 	L["Credit"] = "Благодарность";
 	L["Datatexts Tweaks"] = "Твики инфо-текстов";
-	L["Duration text will be hidden until it reaches this threshold (in seconds). Set to -1 to always show duration text."] = "Текс времени будет скрыт до тех пор, пока не достигнет указанного значения (в секундах). Установите -1, чтобы текст отображался всегда.";
-	L["Duration Text"] = "Текст перезарядки";
 	L["Focus"] = "Фокус";
 	L["FocusTarget"] = "Цель фокуса";
 	L["Free/Total"] = "Свободно/Всего";
-	L["Hide From Others"] = "Скрыть на чужих";
 	L["Hide Raid Control"] = "Скрыть управление рейдом";
 	L["Hide Text On Units"] = "Скрыть текст на юнитах";
-	L["Hide Text"] = "Скрыть текст";
 	L["Hold Shift:"] = "Зажмите Shift";
-	L["Horizontal offset of the duration text."] = "Отступ текста времени по горизонтали.";
-	L["Horizontal offset of the stack count."] = "Отступ текста стаков по горизонтали.";
 	L["Icons"] = "Иконки";
 	L["Increases the amount of messages saved in a chat window, before they get replaced by new messages."] = "Увеличивает количество сообщений, сохраненных в окне чата, прежде чем они будут заменены новыми сообщениями.";
 	L["Increases the maximum allowed vertical and horizontal spacing for party and raid frames."] = "Увеличивает максимально допустимое значение отступа по горизонтали и вертикали для рамок группы и рейда.";
@@ -197,7 +176,6 @@ if L then
 	L["PetTarget"] = "Цель петомца";
 	L["Player"] = "Игрок";
 	L["Please use the following links if you need help or wish to know more about this AddOn."] = "Пожалуйста, используйте следующие ссылки, если вам необходима помощь, или вы хотите узнать больше об этом аддоне.";
-	L["Position of the duration text on the aura icon."] = "Позиция текста времени на иконках аур.";
 	L["Position of the stack count on the aura icon."] = "Позиция текста стаков на иконках аур.";
 	L["PowerBar Texture"] = "Текстура ресурса";
 	L["Raid"] = "Рейд";
@@ -211,21 +189,15 @@ if L then
 	L["Stack Items In Bank"] = "Собрать вещи в банке";
 	L["Stack Items To Bags"] = "Собрать вещи в сумки";
 	L["Stack Items To Bank"] = "Собрать вещи в банк";
-	L["Stack Text"] = "Текст стаков";
 	L["Tank"] = "Танки";
 	L["Target"] = "Цель";
 	L["TargetTarget"] = "Цель цели";
 	L["TargetTargetTarget"] = "Цель цели цели";
 	L["The max amount of messages kept in chat before they get replaced by new messages. Changing this setting will clear the chat in all windows."] = "Максимальное количество сообщений сохраняемых в чате, прежде чем они заменятся новыми сообщениями. Изменение этого параметра очистит чат во всех окнах.";
-	L["Threshold"] = "Порог";
 	L["Tweaks"] = "Твики";
 	L["Unitframe Tweaks"] = "Твики рамок юнитов";
 	L["Use Transparent Template"] = "Сделать фон прозрачным";
 	L["Used/Total"] = "Занято/Всего";
-	L["Vertical offset of the duration text."] = "Отступ текста времени по вертикали.";
-	L["Vertical offset of the stack count."] = "Отступ текста стаков по вертикали.";
-	L["Will hide duration text on auras that are not cast by you."] = "Скрывать текст времени на аурах наложенных не вами.";
-	L["Will hide stack text on auras that are not cast by you."] = "Скрывать текст стаков на аурах наложенных не вами.";
 end
 
 --Chinese (China, simplified) Localizations
